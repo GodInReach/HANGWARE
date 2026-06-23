@@ -1,0 +1,31 @@
+name: Mirror repo to GodInReach
+
+on:
+  push:
+    branches: ['*']
+    tags: ['*']
+
+jobs:
+  mirror:
+    runs-on: ubuntu-latest
+    steps:
+      # 1️⃣ Clone the full repository history
+      - name: Checkout full repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0             # Fixes the shallow clone "index-pack failed" bug
+          persist-credentials: false  # CRITICAL: Stops GitHub from hijacking your PAT with the default bot token
+
+      # 2️⃣ Force push branches and tags to your destination
+      - name: Push to Destination Mirror
+        env:
+          GIT_TOKEN: ${{ secrets.GIT_TOKEN }}
+        run: |
+          # Safe token URL pattern (matching our working local script fix)
+          AUTHED_URL="https://${GIT_TOKEN}@github.com/GodInReach/HANGWARE.git"
+          
+          echo "Syncing all branches..."
+          git push "$AUTHED_URL" --all --force
+          
+          echo "Syncing all tags..."
+          git push "$AUTHED_URL" --tags --force
