@@ -3,7 +3,7 @@ import ScrollReveal from '../components/ScrollReveal'
 
 export const metadata: Metadata = {
   title: 'Terms & Conditions',
-  description: 'HANGWARE Terms and Conditions — the legal agreement governing the use of our services and website.',
+  description: 'HANGWARE Terms and Conditions - the legal agreement governing the use of our services and website.',
 }
 
 export default function TermsConditionsPage() {

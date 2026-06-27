@@ -5,7 +5,7 @@ import AnimatedCounter from '../components/AnimatedCounter'
 
 export const metadata: Metadata = {
   title: 'About Us',
-  description: 'Learn about HANGWARE — a digital product engineering company helping startups and businesses transform ideas into scalable digital solutions.',
+  description: 'Learn about HANGWARE - a digital product engineering company helping startups and businesses transform ideas into scalable digital solutions.',
 }
 
 const team = [
@@ -46,7 +46,7 @@ export default function AboutPage() {
               <span className="badge mb-4 inline-flex">About Us</span>
               <h1 className="mb-5">The Team Behind <span className="gradient-text">HANGWARE</span></h1>
               <p className="text-lg" style={{ color: 'var(--text-secondary)' }}>
-                We&apos;re a team of engineers, designers, and strategists passionate about building technology 
+                We&apos;re a team of engineers, designers, and strategists passionate about building technology
                 that makes a real difference for businesses.
               </p>
             </ScrollReveal>
@@ -63,17 +63,17 @@ export default function AboutPage() {
                 <span className="badge mb-4 inline-flex">Our Story</span>
                 <h2 className="mb-5">From a <span className="gradient-text">Small Idea</span> to a Full-Service Tech Company</h2>
                 <p className="mb-4" style={{ color: 'var(--text-secondary)' }}>
-                  HANGWARE started in 2020 with a simple belief: every startup and business deserves access to 
-                  world-class technology. Too many great ideas were dying because founders couldn&apos;t find reliable, 
+                  HANGWARE started in 2020 with a simple belief: every startup and business deserves access to
+                  world-class technology. Too many great ideas were dying because founders couldn&apos;t find reliable,
                   affordable technology partners.
                 </p>
                 <p className="mb-4" style={{ color: 'var(--text-secondary)' }}>
-                  We set out to change that. Starting with web development, we quickly expanded into mobile apps, 
-                  AI solutions, cloud infrastructure, and SaaS platforms. Today, we&apos;re a full-service digital 
+                  We set out to change that. Starting with web development, we quickly expanded into mobile apps,
+                  AI solutions, cloud infrastructure, and SaaS platforms. Today, we&apos;re a full-service digital
                   product engineering company serving clients across India and beyond.
                 </p>
                 <p style={{ color: 'var(--text-secondary)' }}>
-                  What hasn&apos;t changed is our core commitment: treat every client&apos;s project as if it were our own, 
+                  What hasn&apos;t changed is our core commitment: treat every client&apos;s project as if it were our own,
                   deliver exceptional quality, and always be transparent about timelines and costs.
                 </p>
               </div>
@@ -171,7 +171,6 @@ export default function AboutPage() {
               We&apos;re always looking for talented individuals who share our passion for building great products.
             </p>
             <div className="flex items-center justify-center gap-4 flex-wrap">
-              <a href="/careers" className="btn-primary">View Open Positions</a>
               <a href="/contact" className="btn-secondary">Contact Us</a>
             </div>
           </ScrollReveal>

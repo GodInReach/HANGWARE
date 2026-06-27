@@ -21,7 +21,7 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "HANGWARE — Engineering Digital Products That Drive Business Growth",
+    default: "HANGWARE - Engineering Digital Products That Drive Business Growth",
     template: "%s | HANGWARE",
   },
   description:
@@ -43,13 +43,13 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_IN",
     siteName: "HANGWARE",
-    title: "HANGWARE — Engineering Digital Products That Drive Business Growth",
+    title: "HANGWARE - Engineering Digital Products That Drive Business Growth",
     description:
       "Trusted technology partner helping startups and businesses transform ideas into scalable digital products.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "HANGWARE — Digital Product Engineering",
+    title: "HANGWARE - Digital Product Engineering",
     description:
       "Full Stack Development, AI Solutions, SaaS Platforms & more.",
   },
@@ -89,7 +89,7 @@ export default function RootLayout({
         <ThemeProvider>
           <BinaryBackground />
           <Navbar />
-          <main className="flex-1 relative z-10" style={{ paddingTop: '80px' }}>
+          <main className="flex-1 relative z-10">
             {children}
           </main>
           <Footer />

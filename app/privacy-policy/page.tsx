@@ -3,7 +3,7 @@ import ScrollReveal from '../components/ScrollReveal'
 
 export const metadata: Metadata = {
   title: 'Privacy Policy',
-  description: 'HANGWARE Privacy Policy — how we collect, use, and protect your personal information.',
+  description: 'HANGWARE Privacy Policy - how we collect, use, and protect your personal information.',
 }
 
 export default function PrivacyPolicyPage() {

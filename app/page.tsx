@@ -21,9 +21,9 @@ const services = [
 
 /* ─── Why Choose Data ─── */
 const whyChoose = [
-  { icon: '🎯', title: 'End-to-End Development', desc: 'From idea validation to deployment and maintenance — complete product lifecycle under one roof.' },
+  { icon: '🎯', title: 'End-to-End Development', desc: 'From idea validation to deployment and maintenance - complete product lifecycle under one roof.' },
   { icon: '🏃', title: 'Startup-Friendly', desc: 'MVP development, rapid prototyping, and lean methodology designed for fast-moving startups.' },
-  { icon: '🔧', title: 'Modern Tech Stack', desc: 'Built using industry-leading frameworks — React, Next.js, Flutter, Python, Node.js, AWS, and more.' },
+  { icon: '🔧', title: 'Modern Tech Stack', desc: 'Built using industry-leading frameworks - React, Next.js, Flutter, Python, Node.js, AWS, and more.' },
   { icon: '📈', title: 'Scalable Architecture', desc: 'Solutions designed for future growth with microservices, cloud-native, and event-driven architecture.' },
   { icon: '🛡️', title: 'Dedicated Support', desc: 'Long-term maintenance, monitoring, updates, and a dedicated technical team for your project.' },
   { icon: '💡', title: 'Business-First Approach', desc: 'Technology aligned with real business outcomes, ROI-focused development, and growth-oriented strategy.' },
@@ -48,7 +48,7 @@ const processSteps = [
   { step: '02', title: 'Strategy', desc: 'Architecture planning, technology selection, and detailed project roadmap creation.' },
   { step: '03', title: 'Design', desc: 'UI/UX design with wireframes, prototypes, and user experience validation.' },
   { step: '04', title: 'Development', desc: 'Agile development with iterative sprints, code reviews, and continuous integration.' },
-  { step: '05', title: 'Testing', desc: 'Comprehensive QA — unit testing, integration testing, performance, and security audits.' },
+  { step: '05', title: 'Testing', desc: 'Comprehensive QA - unit testing, integration testing, performance, and security audits.' },
   { step: '06', title: 'Launch & Support', desc: 'Deployment, monitoring, maintenance, and ongoing technical support.' },
 ]
 
@@ -79,7 +79,7 @@ const faqItems = [
   { question: 'Do you provide ongoing support after project delivery?', answer: 'Yes, we offer comprehensive maintenance and support packages including bug fixes, feature updates, performance monitoring, security patches, and 24/7 uptime monitoring. We believe in long-term partnerships, not just one-time projects.' },
   { question: 'How do you handle project communication?', answer: 'We use a combination of Slack, weekly video calls, project management tools (Jira/Linear), and detailed progress reports. You\'ll have a dedicated project manager and direct access to the development team throughout the project.' },
   { question: 'Can you help with legal and business setup for startups?', answer: 'Yes, through our trusted professional partners, we assist with company registration, GST registration, trademark guidance, privacy policy creation, NDA preparation, and other legal compliance requirements for startups.' },
-  { question: 'What is your pricing model?', answer: 'We offer flexible pricing — fixed-price for well-defined projects, time & materials for evolving requirements, and dedicated team models for long-term engagements. We provide transparent estimates during our free consultation with no hidden costs.' },
+  { question: 'What is your pricing model?', answer: 'We offer flexible pricing - fixed-price for well-defined projects, time & materials for evolving requirements, and dedicated team models for long-term engagements. We provide transparent estimates during our free consultation with no hidden costs.' },
 ]
 
 /* ─── Featured Projects ─── */
@@ -96,7 +96,7 @@ export default function HomePage() {
       {/* ═══════════════════════════════════════════
           SECTION 1: HERO BANNER
          ═══════════════════════════════════════════ */}
-      <section id="hero" className="relative min-h-[90vh] flex items-center overflow-hidden">
+      <section id="hero" className="relative w-full h-screen flex items-center">
         {/* Gradient Orbs */}
         <div className="absolute top-20 left-10 w-72 h-72 rounded-full opacity-20 blur-3xl animate-float" style={{ background: 'radial-gradient(circle, #0066ff, transparent)' }} />
         <div className="absolute bottom-20 right-10 w-96 h-96 rounded-full opacity-15 blur-3xl animate-float" style={{ background: 'radial-gradient(circle, #00d4ff, transparent)', animationDelay: '3s' }} />
@@ -104,21 +104,22 @@ export default function HomePage() {
 
         <div className="container-custom relative z-10 py-20">
           <div className="max-w-4xl mx-auto text-center">
-            <ScrollReveal>
-              <span className="badge mb-6 inline-flex">🚀 Digital Product Engineering Company</span>
-            </ScrollReveal>
 
             <ScrollReveal delay={100}>
-              <h1 className="mb-6 leading-tight">
-                Engineering Digital Products{' '}
-                <span className="gradient-text">That Drive Business Growth</span>
-              </h1>
+              <div className="flex justify-center items-center w-full">
+                <h1
+                  className="mb-6 leading-tight text-center"
+                  style={{ fontSize: 'clamp(3.5rem, 15vw, 12rem)' }}
+                >
+                  <span className="gradient-text">HANGWARE</span>
+                </h1>
+              </div>
             </ScrollReveal>
 
             <ScrollReveal delay={200}>
               <p className="text-lg md:text-xl mb-10 max-w-2xl mx-auto" style={{ color: 'var(--text-secondary)' }}>
-                We help startups and businesses transform innovative ideas into scalable, 
-                high-performance digital products. From concept to deployment — your trusted technology partner.
+                We help startups and businesses transform innovative ideas into scalable,
+                high-performance digital products. From concept to deployment - your trusted technology partner.
               </p>
             </ScrollReveal>
 
@@ -126,7 +127,7 @@ export default function HomePage() {
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
                 <a href="/contact" className="btn-primary text-base px-8 py-4">
                   Start Your Project
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" /></svg>
                 </a>
                 <a href="/portfolio" className="btn-secondary text-base px-8 py-4">
                   View Our Work
@@ -134,22 +135,6 @@ export default function HomePage() {
               </div>
             </ScrollReveal>
 
-            {/* Hero Stats */}
-            <ScrollReveal delay={400}>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-                {[
-                  { value: '150+', label: 'Projects Delivered' },
-                  { value: '50+', label: 'Happy Clients' },
-                  { value: '5+', label: 'Years Experience' },
-                  { value: '25+', label: 'Team Members' },
-                ].map((stat) => (
-                  <div key={stat.label} className="glass-card p-5 text-center">
-                    <div className="text-2xl md:text-3xl font-bold gradient-text mb-1">{stat.value}</div>
-                    <div className="text-xs font-medium" style={{ color: 'var(--text-tertiary)' }}>{stat.label}</div>
-                  </div>
-                ))}
-              </div>
-            </ScrollReveal>
           </div>
         </div>
       </section>
@@ -167,13 +152,13 @@ export default function HomePage() {
                   A Technology Partner You Can <span className="gradient-text">Trust</span>
                 </h2>
                 <p className="mb-4" style={{ color: 'var(--text-secondary)' }}>
-                  HANGWARE is a technology company specializing in software development, AI-powered solutions, 
-                  and digital transformation services. We help startups, businesses, and organizations turn 
+                  HANGWARE is a technology company specializing in software development, AI-powered solutions,
+                  and digital transformation services. We help startups, businesses, and organizations turn
                   innovative ideas into scalable products through modern technology.
                 </p>
                 <p className="mb-6" style={{ color: 'var(--text-secondary)' }}>
-                  From concept validation to deployment and maintenance, we provide complete end-to-end 
-                  product development services under one roof. Our team brings expertise across web, mobile, 
+                  From concept validation to deployment and maintenance, we provide complete end-to-end
+                  product development services under one roof. Our team brings expertise across web, mobile,
                   AI, cloud, and business automation domains.
                 </p>
                 <div className="grid grid-cols-2 gap-4">
@@ -244,7 +229,7 @@ export default function HomePage() {
             ))}
           </div>
 
-          {/* Secondary Service (Hardware & IoT) — Small, bottom */}
+          {/* Secondary Service (Hardware & IoT) - Small, bottom */}
           <ScrollReveal delay={100}>
             <div className="mt-5 max-w-md mx-auto">
               <div className="glass-card p-4 flex items-center gap-4 opacity-70 hover:opacity-100 transition-opacity">
@@ -266,7 +251,7 @@ export default function HomePage() {
         <div className="container-custom">
           <SectionHeading
             badge="Why HANGWARE"
-            title='Why Businesses <span class="gradient-text">Choose Us</span>'
+            title='Why <span class="gradient-text">Choose Us?</span>'
             subtitle="We combine technical excellence with business understanding to deliver solutions that matter."
           />
 
@@ -285,9 +270,9 @@ export default function HomePage() {
       </section>
 
       {/* ═══════════════════════════════════════════
-          SECTION 5: FEATURED PROJECTS
+          SECTION 5: FEATURED PROJECTS  ##HIDDEN
          ═══════════════════════════════════════════ */}
-      <section id="featured-projects" className="section">
+      <section id="featured-projects" className="section" hidden>
         <div className="container-custom">
           <SectionHeading
             badge="Portfolio"
@@ -330,36 +315,13 @@ export default function HomePage() {
             <div className="text-center mt-10">
               <a href="/portfolio" className="btn-secondary">
                 View All Projects
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" /></svg>
               </a>
             </div>
           </ScrollReveal>
         </div>
       </section>
 
-      {/* ═══════════════════════════════════════════
-          SECTION 6: INDUSTRIES SERVED
-         ═══════════════════════════════════════════ */}
-      <section id="industries" className="section aurora-bg">
-        <div className="container-custom">
-          <SectionHeading
-            badge="Industries"
-            title='Industries We <span class="gradient-text">Serve</span>'
-            subtitle="Deep domain expertise across key sectors, delivering industry-specific digital solutions."
-          />
-
-          <div className="grid grid-cols-3 md:grid-cols-5 lg:grid-cols-9 gap-4">
-            {industries.map((ind, i) => (
-              <ScrollReveal key={ind.name} delay={i * 50}>
-                <div className="glass-card p-5 text-center group cursor-pointer hover:scale-105 transition-transform">
-                  <div className="text-3xl mb-2 transition-transform duration-300 group-hover:scale-125">{ind.icon}</div>
-                  <div className="text-xs font-semibold" style={{ color: 'var(--text-secondary)' }}>{ind.name}</div>
-                </div>
-              </ScrollReveal>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* ═══════════════════════════════════════════
           SECTION 7: DEVELOPMENT PROCESS
@@ -426,9 +388,9 @@ export default function HomePage() {
       </section>
 
       {/* ═══════════════════════════════════════════
-          SECTION 9: TESTIMONIALS
+          SECTION 9: TESTIMONIALS  ## HIDDEN
          ═══════════════════════════════════════════ */}
-      <section id="testimonials" className="section">
+      <section id="testimonials" className="section" hidden>
         <div className="container-custom">
           <SectionHeading
             badge="Client Testimonials"
@@ -442,7 +404,7 @@ export default function HomePage() {
                 <div className="glass-card p-7 h-full relative">
                   {/* Quote mark */}
                   <div className="absolute top-4 right-6 text-5xl opacity-10 font-serif" style={{ color: 'var(--accent-primary)' }}>&ldquo;</div>
-                  
+
                   {/* Stars */}
                   <div className="flex gap-1 mb-4">
                     {Array.from({ length: t.rating }).map((_, j) => (
@@ -473,21 +435,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ═══════════════════════════════════════════
-          SECTION 10: ANIMATED STATISTICS
-         ═══════════════════════════════════════════ */}
-      <section id="statistics" className="section aurora-bg">
-        <div className="container-custom">
-          <div className="glass-card p-10 md:p-14">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              <AnimatedCounter end={150} suffix="+" label="Projects Delivered" />
-              <AnimatedCounter end={50} suffix="+" label="Happy Clients" />
-              <AnimatedCounter end={5} suffix="+" label="Years of Excellence" />
-              <AnimatedCounter end={25} suffix="+" label="Team Members" />
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* ═══════════════════════════════════════════
           SECTION 11: FAQ
@@ -518,7 +465,7 @@ export default function HomePage() {
                   <span className="gradient-text">Next Product?</span>
                 </h2>
                 <p className="mb-8" style={{ color: 'var(--text-secondary)' }}>
-                  Whether you&apos;re a startup with a game-changing idea or an enterprise looking to modernize — 
+                  Whether you&apos;re a startup with a game-changing idea or an enterprise looking to modernize -
                   we&apos;re here to help. Book a free consultation and let&apos;s discuss how we can bring your vision to life.
                 </p>
 

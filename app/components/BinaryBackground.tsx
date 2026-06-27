@@ -41,16 +41,16 @@ export default function BinaryBackground() {
     for (let i = 0; i < count; i++) {
       const layer = Math.random() < 0.3 ? 0 : Math.random() < 0.6 ? 1 : 2
       const layerScale = [0.6, 0.8, 1.0][layer]
-      const baseOpacity = [0.08, 0.14, 0.22][layer]
+      const baseOpacity = [0.06, 0.12, 0.18][layer]
 
       digits.push({
         x: Math.random() * width,
         y: Math.random() * height,
         value: Math.random() > 0.5 ? '1' : '0',
-        speed: (0.15 + Math.random() * 0.4) * layerScale,
+        speed: (0.1 + Math.random() * 0.3) * layerScale,
         opacity: baseOpacity,
         baseOpacity,
-        size: (10 + Math.random() * 6) * layerScale,
+        size: (9 + Math.random() * 7) * layerScale,
         layer,
         brightness: 0,
         targetBrightness: 0,
@@ -195,22 +195,37 @@ export default function BinaryBackground() {
 
         // Glow effect for bright digits
         if (d.brightness > 0.1) {
-          const glowAlpha = d.brightness * 0.3
-          ctx.shadowColor = `rgba(0, 212, 255, ${glowAlpha})`
-          ctx.shadowBlur = d.brightness * 20
+          const glowAlpha = d.brightness * 0.4
+          ctx.shadowColor = d.layer === 2 ? `rgba(0, 212, 255, ${glowAlpha})` : `rgba(124, 58, 237, ${glowAlpha})`
+          ctx.shadowBlur = d.brightness * 25
         } else {
           ctx.shadowColor = 'transparent'
           ctx.shadowBlur = 0
         }
 
-        // Color: interpolate between dim gray and bright cyan
-        const r = Math.round(100 + d.brightness * 155)
-        const g = Math.round(120 + d.brightness * 92)
-        const b = Math.round(140 + d.brightness * 115)
+        // Color selection based on layer and brightness
+        let color;
+        if (d.brightness > 0.5) {
+          // Interaction color (Cyan to White glow)
+          color = `rgba(${150 + d.brightness * 105}, ${220 + d.brightness * 35}, 255, ${finalOpacity})`
+        } else {
+          // Layer based colors
+          if (d.layer === 0) color = `rgba(100, 116, 139, ${finalOpacity})` // Slate
+          else if (d.layer === 1) color = `rgba(99, 102, 241, ${finalOpacity})` // Indigo
+          else color = `rgba(0, 212, 255, ${finalOpacity})` // Cyan
+        }
 
-        ctx.font = `${d.size}px "JetBrains Mono", monospace`
-        ctx.fillStyle = `rgba(${r}, ${g}, ${b}, ${finalOpacity})`
+        ctx.font = `${d.layer === 2 ? 'bold ' : ''}${d.size}px "JetBrains Mono", monospace`
+        ctx.fillStyle = color
         ctx.fillText(d.value, drawX, drawY)
+
+        // Occasionally draw a tiny secondary glow point
+        if (d.brightness > 0.8 && Math.random() > 0.95) {
+          ctx.beginPath()
+          ctx.arc(drawX + d.size / 2, drawY - d.size / 2, 1, 0, Math.PI * 2)
+          ctx.fillStyle = 'white'
+          ctx.fill()
+        }
       }
 
       // Reset shadow for performance
