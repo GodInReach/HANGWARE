@@ -65,7 +65,7 @@ export default function TermsConditionsPage() {
             },
             {
               title: '12. Contact',
-              content: 'For questions about these Terms and Conditions, please contact us at:\n\nEmail: hello@hangware.in\nPhone: +91 98765 43210',
+              content: 'For questions about these Terms and Conditions, please contact us at:\n\nEmail: thehangware@gmail.com',
             },
           ].map((section, i) => (
             <ScrollReveal key={section.title} delay={i * 30}>

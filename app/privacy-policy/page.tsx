@@ -57,7 +57,7 @@ export default function PrivacyPolicyPage() {
             },
             {
               title: '10. Contact Us',
-              content: 'If you have any questions about this privacy policy or our data practices, please contact us at:\n\nEmail: hello@hangware.in\nPhone: +91 98765 43210',
+              content: 'If you have any questions about this privacy policy or our data practices, please contact us at:\n\nEmail: thehangware@gmail.com',
             },
           ].map((section, i) => (
             <ScrollReveal key={section.title} delay={i * 30}>

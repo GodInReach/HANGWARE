@@ -12,11 +12,8 @@ const services = [
   { icon: '🧠', title: 'AI & Automation Solutions', desc: 'AI-powered assistants, workflow automation, intelligent search, and machine learning integrations for smarter business.', primary: true },
   { icon: '🎨', title: 'UI/UX Design', desc: 'User-centric interfaces that improve engagement, conversions, and brand perception through research-driven design.', primary: true },
   { icon: '💻', title: 'Custom Software Development', desc: 'Tailored software solutions engineered to match your unique business requirements and operational workflows.', primary: true },
-  { icon: '🌐', title: 'Cloud Solutions', desc: 'AWS, GCP, and Azure deployment, optimization, DevOps automation, and cloud infrastructure management.', primary: true },
-  { icon: '⚙️', title: 'Business Automation', desc: 'Streamline operations with custom CRMs, ERPs, workflow engines, and process automation systems.', primary: true },
-  { icon: '🚀', title: 'Startup Consulting', desc: 'MVP development, rapid prototyping, pitch deck tech support, and go-to-market technology strategy.', primary: true },
-  { icon: '📋', title: 'Legal Business Services', desc: 'Company registration, GST, trademark guidance, NDA preparation, and compliance support through trusted partners.', primary: true },
-  { icon: '🔌', title: 'Hardware & IoT Solutions', desc: 'Custom IoT integrations, embedded systems, and smart device development for selected projects.', primary: false },
+
+  { icon: '🔌', title: 'Hardware & IoT Solutions', desc: 'Custom IoT integrations, embedded systems, and smart device development for selected projects.', primary: true },
 ]
 
 /* ─── Why Choose Data ─── */
@@ -52,15 +49,6 @@ const processSteps = [
   { step: '06', title: 'Launch & Support', desc: 'Deployment, monitoring, maintenance, and ongoing technical support.' },
 ]
 
-/* ─── Tech Stack ─── */
-const techStack = [
-  { category: 'Frontend', techs: ['React', 'Next.js', 'Vue.js', 'TypeScript', 'Tailwind CSS'] },
-  { category: 'Backend', techs: ['Node.js', 'Python', 'Go', 'Java', 'GraphQL'] },
-  { category: 'Mobile', techs: ['Flutter', 'React Native', 'Swift', 'Kotlin'] },
-  { category: 'Cloud', techs: ['AWS', 'Google Cloud', 'Azure', 'Docker', 'Kubernetes'] },
-  { category: 'AI/ML', techs: ['TensorFlow', 'PyTorch', 'OpenAI', 'LangChain'] },
-  { category: 'Database', techs: ['PostgreSQL', 'MongoDB', 'Redis', 'Firebase'] },
-]
 
 /* ─── Testimonials ─── */
 const testimonials = [
@@ -229,18 +217,7 @@ export default function HomePage() {
             ))}
           </div>
 
-          {/* Secondary Service (Hardware & IoT) - Small, bottom */}
-          <ScrollReveal delay={100}>
-            <div className="mt-5 max-w-md mx-auto">
-              <div className="glass-card p-4 flex items-center gap-4 opacity-70 hover:opacity-100 transition-opacity">
-                <div className="text-2xl">🔌</div>
-                <div>
-                  <h4 className="text-sm font-semibold">Hardware & IoT Solutions</h4>
-                  <p className="text-xs" style={{ color: 'var(--text-tertiary)' }}>Custom IoT integrations and embedded systems for selected projects.</p>
-                </div>
-              </div>
-            </div>
-          </ScrollReveal>
+
         </div>
       </section>
 
@@ -353,39 +330,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ═══════════════════════════════════════════
-          SECTION 8: TECHNOLOGY STACK
-         ═══════════════════════════════════════════ */}
-      <section id="tech-stack" className="section aurora-bg">
-        <div className="container-custom">
-          <SectionHeading
-            badge="Tech Stack"
-            title='Technologies We <span class="gradient-text">Use</span>'
-            subtitle="We select the best tools for each project, ensuring performance, scalability, and maintainability."
-          />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-            {techStack.map((cat, i) => (
-              <ScrollReveal key={cat.category} delay={i * 80}>
-                <div className="glass-card p-6 h-full">
-                  <h4 className="text-sm font-bold uppercase tracking-wider mb-4 gradient-text">{cat.category}</h4>
-                  <div className="flex flex-wrap gap-2">
-                    {cat.techs.map((tech) => (
-                      <span
-                        key={tech}
-                        className="px-3 py-1.5 text-sm font-medium rounded-lg transition-all duration-300 hover:scale-105 cursor-default"
-                        style={{ background: 'var(--glass-bg)', border: '1px solid var(--glass-border)', color: 'var(--text-secondary)' }}
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </ScrollReveal>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* ═══════════════════════════════════════════
           SECTION 9: TESTIMONIALS  ## HIDDEN
@@ -471,9 +416,8 @@ export default function HomePage() {
 
                 <div className="space-y-4">
                   {[
-                    { icon: '📧', label: 'Email', value: 'hello@hangware.in' },
-                    { icon: '📞', label: 'Phone', value: '+91 98765 43210' },
-                    { icon: '💬', label: 'WhatsApp', value: 'Chat with us instantly' },
+                    { icon: '📧', label: 'Email', value: 'thehangware@gmail.com' },
+
                     { icon: '📍', label: 'Location', value: 'India' },
                   ].map((contact) => (
                     <div key={contact.label} className="flex items-center gap-3">

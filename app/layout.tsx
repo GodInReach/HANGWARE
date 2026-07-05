@@ -5,7 +5,6 @@ import ThemeProvider from "./components/ThemeProvider";
 import BinaryBackground from "./components/BinaryBackground";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import WhatsAppWidget from "./components/WhatsAppWidget";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -93,7 +92,6 @@ export default function RootLayout({
             {children}
           </main>
           <Footer />
-          <WhatsAppWidget />
         </ThemeProvider>
       </body>
     </html>
